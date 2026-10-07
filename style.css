@@ -6,16 +6,11 @@
 }
 
 body {
-    background-color: #93b33d; /* Žluto-zelené pozadí podle obrázku */
+    background-color: #93b33d;
     color: #333333;
     padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.container {
-    width: 100%;
     max-width: 700px;
+    margin: 0 auto; 
 }
 
 h1 {
@@ -24,20 +19,20 @@ h1 {
     margin-bottom: 10px;
 }
 
-.subtitle {
+p {
     color: #4a5d16;
     font-size: 16px;
     margin-bottom: 25px;
 }
-
-.form-group {
-    margin-bottom: 20px;
+#question-form {
+    margin-bottom: 35px;
 }
 
 label {
-    display: block;
+    display: inline-block;
     color: #4a5d16;
     font-weight: bold;
+    margin-top: 15px;
     margin-bottom: 8px;
     font-size: 15px;
 }
@@ -48,10 +43,11 @@ textarea {
     padding: 10px 12px;
     border: 1px solid #7a972c;
     border-radius: 4px;
-    background-color: #a2c248; /* Světlejší zelené pozadí vstupů */
+    background-color: #a2c248; 
     color: #222222;
     font-size: 14px;
     outline: none;
+    font-family: inherit;
 }
 
 textarea::placeholder,
@@ -65,7 +61,7 @@ textarea:focus {
     background-color: #a8c84e;
 }
 
-.btn {
+button[type="submit"] {
     background-color: #a8ca4a;
     color: #33420d;
     border: 1px solid #7a972c;
@@ -73,25 +69,21 @@ textarea:focus {
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-    margin-bottom: 35px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-top: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.btn:hover {
+button[type="submit"]:hover {
     background-color: #b3d552;
 }
 
-.response-section {
-    margin-top: 10px;
-}
-
-.response-section h2 {
+h2 {
     color: #4a5d16;
     font-size: 22px;
     margin-bottom: 15px;
 }
 
-.response-box {
+#answer {
     background-color: #8aa838;
     padding: 25px 15px;
     border-radius: 4px;
