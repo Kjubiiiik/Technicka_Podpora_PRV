@@ -2,7 +2,7 @@
 const USE_BACKEND = false;
 
 // TADY si každý student nastaví svoje údaje (až bude backend):
-const BACKEND_URL = "https://vdf-games-kostak.onrender.com/chat";
+const BACKEND_URL = "https://technicka-podpora-prv.onrender.com/";
 const STUDENT_ID = "HAVLIK_JAKUB_4IT";
 
 const form = document.getElementById("question-form");
