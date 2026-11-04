@@ -16,16 +16,12 @@ def chat():
     data = request.get_json(silent=True) or {}
     message = (data.get("message") or "").strip()
     student = (data.get("student") or "unknown").strip()
-    email = (data.get("email") or "").strip()
 
     if not message:
         return jsonify({"error": "message is required"}), 400
 
     # Zatím fake odpověď (fáze BACKEND)
     reply = f"[DEMO] Přijal jsem dotaz od {student}: {message}"
-
-    email_info = f" (kontakt: {email})" if email else ""
-    reply = f"Díky za tvůj dotaz{email_info}! Podpora VDF Games na něm pracuje: \"{message}\""
 
     return jsonify({"reply": reply})
 
