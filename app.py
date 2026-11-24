@@ -105,17 +105,17 @@ def chat():
     if not OPENAI_API_KEY or client is None:
         return jsonify({
             "error": "Na serveru chybí OPENAI_API_KEY."
-        }), 500
+        }), 501
 
     if not OPENAI_MODEL:
         return jsonify({
             "error": "Na serveru chybí OPENAI_MODEL."
-        }), 500
+        }), 502
 
     if not documentation:
         return jsonify({
             "error": "Server nenašel dokumentaci docs/podpora.md."
-        }), 500
+        }), 503
 
     prompt = f"""
 FIREMNÍ DOKUMENTACE:
