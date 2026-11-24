@@ -148,7 +148,7 @@ DOTAZ ZÁKAZNÍKA:
         if not reply:
             return jsonify({
                 "error": "Model nevrátil textovou odpověď."
-            }), 500
+            }), 504
 
         return jsonify({
             "reply": reply
@@ -159,7 +159,7 @@ DOTAZ ZÁKAZNÍKA:
 
         return jsonify({
             "error": "Nepodařilo se vytvořit odpověď podpory."
-        }), 500
+        }), 505
 
 
 # ------------------------------------------------------------
