@@ -155,10 +155,10 @@ DOTAZ ZÁKAZNÍKA:
         })
 
     except Exception as error:
-        print("OpenAI API error:", repr(error))
-
+        app.logger.exception("OpenAI API error")
         return jsonify({
-            "error": "Nepodařilo se vytvořit odpověď podpory."
+            "error": "Nepodařilo se vytvořit odpověď podpory.",
+            "details": repr(error),
         }), 505
 
 
